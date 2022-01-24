@@ -1,1 +1,1 @@
-# decor
+# decor-interior
