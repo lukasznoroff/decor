@@ -1,0 +1,39 @@
+body.about {
+
+  .about {
+    @include maxw($mobileBreakpoint) {
+      display: block;
+      height: auto;
+      border-bottom: none;
+    }
+  }
+
+  .col-left {
+    height: 80vh;
+    @include maxw($mobileBreakpoint) {
+      height: auto;
+    }
+  }
+
+  .hero-heading {
+    display: inline-flex;
+    align-items: center;
+    height: 300px;
+    font-size: clamp(1.3rem, 5.5vw, 6rem);
+    color: $color2;
+  }
+
+  .col-right {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+
+    .text-wrap {
+      max-width: 80%;
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: clamp(.9rem, 1vw, 1.25rem);
+    }
+  }
+}

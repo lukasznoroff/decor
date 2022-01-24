@@ -1,0 +1,5 @@
+body.checkout {
+  .main-wrap {
+    @include columns-with-borders;
+  }
+}

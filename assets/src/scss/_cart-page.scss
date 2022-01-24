@@ -1,0 +1,123 @@
+body.cart {
+  .main-cols-wrap {
+    @include columns-with-borders;
+  }
+
+  .col-right {
+    .col-inner-wrapper {
+      flex: 1;
+    }
+
+    .empty-cart {
+      .text {
+        margin-bottom: 1.5em;
+      }
+    }
+
+    .items {
+      .item {
+        display: flex;
+        margin-bottom: 35px;
+
+        .img-wrap {
+
+          img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            border: 1px solid $color-gray-borders;
+          }
+        }
+
+        .content-wrap {
+          display: flex;
+          flex-direction: column;
+          padding-left: 20px;
+
+          .product-title {
+            line-height: 1.3;
+            margin-bottom: 4px;
+            font-size: 17px;
+          }
+
+          .price {
+            font-size: 14px;
+            margin-bottom: 6px;
+          }
+
+          .quantity {
+            font-size: 14px;
+            margin-top: auto;
+            margin-bottom: 4px;
+
+            .number {
+              font-size: 17px;
+            }
+          }
+
+          .remove {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            margin-bottom: 4px;
+            cursor: pointer;
+            opacity: 0.8;
+
+            &:hover {
+              text-decoration: underline;
+
+            }
+
+            &:after {
+              width: 15px;
+              height: 15px;
+              content: "";
+              margin-left: 4px;
+              @include with-css-background;
+              background-image: url("/assets/images/icons8-trash.svg");
+            }
+          }
+        }
+      }
+    }
+
+    .order-notes {
+      margin-bottom: 30px;
+
+      .order-notes-textarea {
+        height: 130px;
+        width: 100%;
+        border: 1px solid $color2a;
+        @include basicTransition;
+        padding: 20px;
+
+        &:hover {
+          border-color: $color2;
+        }
+
+        &::placeholder {
+          color: $color2;
+
+        }
+      }
+    }
+
+    .cart-totals {
+      text-align: right;
+
+      .cart-total-title {
+        font-weight: 600;
+        margin-bottom: 5px;
+
+        .value {
+          font-size: 24px;
+          margin-left: 3px;
+        }
+      }
+
+      .after-cart-total {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+          content="Interior is a shop with unique furniture and decor pieces from all over the world"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&family=Work+Sans:wght@500;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>Interior Admin Panel</title>
+</head>
+<body class="admin-panel">
+<header class="js-render-header">
+</header>
+
+<section class="add-new-product">
+    <div class="container">
+        <h2 class="heading-2-small">Add new product</h2>
+        <button class="js-toggle-section btn-1">Click to add new product</button>
+        <div class="js-section-to-toggle">
+            <form class="form-add-new-product">
+                <input type="text" class="product-title" placeholder="Insert product title">
+                <label>
+                    Insert product price
+                    <input min="0.01" step="0.01" class="product-price" type="number">
+                </label>
+                <label>
+                    <input class="product-featured" type="checkbox">
+                    Is product featured?
+                </label>
+                <textarea class="product-content" placeholder="Insert product description"></textarea>
+                <div class="btn-wrap">
+                    <button class="btn-1" type="submit">Add new product</button>
+                </div>
+
+                <div class="messages"></div>
+            </form>
+        </div>
+    </div>
+
+</section>
+<section class="section-products-list">
+    <div class="container">
+        <h2 class="heading-2-small">Manage products</h2>
+        <div class="js-products-list">
+
+        </div>
+    </div>
+
+</section>
+
+<div class="popup-form-edit admin-popup">
+
+    <form class="form-edit-product">
+        <div class="js-close-edit-popup close-popup">Close</div>
+        <h2 class="heading-2-small">Edit product</h2>
+        <input type="text" class="product-title" placeholder="Insert product title">
+        <label>
+            Insert product price
+            <input min="0.01" step="0.01" class="product-price" type="number">
+        </label>
+        <label>
+            <input class="product-featured" type="checkbox">
+            Is product featured?
+        </label>
+        <textarea class="product-content" placeholder="Insert product description"></textarea>
+        <div class="btn-wrap">
+            <button class="btn-1 js-submit-form-edit" type="submit">Edit product</button>
+        </div>
+
+        <input type="hidden" class="product-id">
+        <div class="messages"></div>
+
+    </form>
+</div>
+
+<div class="popup-remove-product admin-popup">
+
+    <form class="form-remove-product">
+        <div class="js-close-remove-popup close-popup">Close</div>
+        <h2 class="heading-2-small">Remove product</h2>
+        <p class="confirm">Please confirm you want to remove the following product:</p>
+        <div class="product-title"></div>
+        <div class="btn-wrap">
+            <button class="btn-1 js-submit-form-remove" type="submit">Remove product</button>
+        </div>
+
+        <input type="hidden" class="product-id">
+        <div class="messages"></div>
+
+    </form>
+</div>
+
+
+<div class="js-render-footer">
+
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

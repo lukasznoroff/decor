@@ -1,0 +1,72 @@
+@mixin minw($br) {
+  @media (min-width: $br) {
+    @content;
+  }
+}
+
+@mixin maxw($br) {
+  @media (max-width: $br) {
+    @content;
+  }
+}
+
+@mixin basicTransition() {
+  transition: all 0.2s;
+}
+
+@mixin basicTransitionLong() {
+  transition: all 0.6s;
+}
+
+@mixin with-css-background() {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+@mixin blockAfterorBefore($width: 20px, $height: 20px) {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+@mixin reset-btn-and-input {
+  font-family: $font1;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+&[type=number] {
+  -moz-appearance: textfield;
+}
+}
+
+@mixin columns-with-borders {
+  display: flex;
+
+  > *{
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+  }
+  > *:nth-child(1){
+    height: calc(100vh - 120px);
+    border-bottom: 1px solid $color-gray-borders;
+    padding-left: 9vw;
+    padding-right: 9vw;
+
+  }
+  > *:nth-child(2) {
+    padding: 100px 80px;
+    border-left: 1px solid $color-gray-borders;
+    border-bottom: 1px solid $color-gray-borders;
+  }
+}

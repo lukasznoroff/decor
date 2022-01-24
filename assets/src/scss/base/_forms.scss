@@ -1,0 +1,52 @@
+body {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"]
+  {
+    background: $color-gray1;
+    height: 55px;
+    padding: 0 20px;
+    border: none;
+    color: $color2;
+    font-size: 15px;
+    font-family: $font2;
+    width: 100%;
+    @include basicTransition;
+    outline: 1px solid transparent;
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+    &:focus {
+      outline-color: $color2;
+    }
+    &::placeholder {
+      color: $color2a;
+    }
+  }
+  .form-search-products {
+    position: relative;
+    .search-btn {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include basicTransition;
+      opacity: 0.12;
+      width: 24px;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .notice {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    color: $color2;
+  }
+  .form-group {
+    position: relative;
+  }
+}

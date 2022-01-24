@@ -1,0 +1,125 @@
+header.main-header {
+  border-bottom: 1px solid $color-gray-borders;
+  @include maxw($mobileBreakpoint) {
+    position: fixed;
+    z-index: 99;
+    background-color: $color1;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+  }
+
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    @include maxw($mobileBreakpoint) {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      top: 8%;
+      left: 100%;
+      height: 100vh;
+      width: 100%;
+      background-color: $color1;
+      transition: 1s ease-in-out;
+      z-index: 99;
+      overflow-y: hidden;
+    }
+
+    &.open {
+      transform: translateX(-100%);
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: $color2;
+    text-decoration: none;
+    transition: .3s;
+
+    &:hover {
+      color: $color3;
+    }
+  }
+
+  .cart-item {
+    position: relative;
+
+    .js-cart-total-items {
+      width: 17px;
+      height: 17px;
+      font-size: 13px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: $color3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: -6px;
+      right: -6px;
+    }
+  }
+
+  .hamburger {
+    display: none;
+    @include maxw($mobileBreakpoint) {
+      display: block;
+      position: relative;
+    }
+
+    .line1, .line2, .line3 {
+      display: block;
+      width: 35px;
+      height: 3px;
+      margin: 5px;
+      background-color: $color2;
+      transition: .3s all;
+    }
+
+    &.open .line1 {
+      transform: rotateZ(45deg) translateY(200%);
+    }
+
+    &.open .line2 {
+      display: none;
+    }
+
+    &.open .line3 {
+      transform: translateY(0.5rem);
+      transform: rotateZ(-45deg) translateY(-200%);
+    }
+  }
+
+  .submenu-links {
+    position: relative;
+  }
+
+  .submenu {
+    position: absolute;
+    flex-direction: column;
+    padding: 0;
+    display: none;
+  }
+
+  .submenu-links {
+    &:hover .submenu {
+      display: block;
+    }
+  }
+
+  .submenu > * {
+    padding-top: 10px;
+    width: 30%;
+  }
+}

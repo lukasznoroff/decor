@@ -1,0 +1,45 @@
+@mixin heading {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@mixin heading-2 {
+  @include heading;
+  font-size: clamp(30px, 4vw, 90px);
+  &.with-margin {
+    margin-bottom: clamp(20px, 2vw, 45px);
+  }
+}
+
+@mixin heading-2-small {
+  @include heading;
+  font-size: clamp(30px, 2.4vw, 40px);
+  margin-bottom: clamp(20px, 2vw, 30px);
+}
+
+.heading-2 {
+  @include heading-2;
+}
+
+.heading-with-decoration {
+  position: relative;
+  padding-bottom: 60px;
+  &:after {
+    @include blockAfterorBefore();
+    width: 60px;
+    height: 4px;
+    background-color: $color2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.heading-2-small {
+  @include heading-2-small();
+}
+
+.heading-3 {
+  @include heading;
+  font-size: 25px;
+}

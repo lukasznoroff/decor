@@ -1,0 +1,181 @@
+body.admin-panel {
+
+  form {
+    input:not(input[type=checkbox]), label, textarea {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      border: 1px solid $color-gray-borders;
+      padding: 7px;
+      border-radius: 3px;
+    }
+
+    .btn-wrap {
+      text-align: center;
+      margin-top: 30px;
+
+      button {
+        min-width: 200px;
+      }
+    }
+
+    .messages {
+      font-size: 15px;
+      text-align: center;
+      letter-spacing: 0.3px;
+      margin-top: 15px;
+
+      &.success {
+        color: $color3;
+      }
+    }
+  }
+
+  .add-new-product {
+    .heading-2 {
+      font-size: 2vw;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3vh auto;
+    background-color: $color-gray1;
+    padding: 30px 0;
+
+    .js-section-to-toggle {
+      .form-add-new-product {
+        > * {
+          margin-bottom: 30px;
+        }
+
+        input {
+          border: 1px solid $color-gray-borders;
+
+        }
+
+      }
+
+    }
+
+    .js-section-to-toggle {
+      display: none;
+      padding-top: 30px;
+
+      &.visible {
+        display: block;
+      }
+    }
+  }
+
+  .section-products-list {
+    .product-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-gray-borders;
+
+      .img-wrap {
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .product-title {
+        font-size: 14px;
+        font-weight: bold;
+        margin-right: 15px;
+        text-transform: uppercase;
+      }
+
+      .price {
+        font-weight: bold;
+        font-size: 17px;
+      }
+
+      .actions {
+        margin-left: auto;
+
+        button {
+          @include reset-btn-and-input();
+          border-radius: 30px;
+          border: 1px solid $color-gray-borders;
+          padding: 10px 25px;
+          text-transform: uppercase;
+          font-size: 14px;
+          margin-right: 10px;
+          @include basicTransition();
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-gray-borders;
+            color: #fff;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .admin-popup {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &.visible {
+      display: flex;
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 14px;
+      text-decoration: underline;
+      font-weight: bold;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+    }
+
+    form, .inner-popup {
+      padding: 25px 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      width: clamp(250px, 90vw, 800px);
+      position: relative;
+
+    }
+  }
+
+  .form-remove-product {
+    .product-title {
+      font-weight: bold;
+      letter-spacing: 0.3px;
+      margin-top: 4px;
+      font-size: 17px;
+    }
+  }
+}
+

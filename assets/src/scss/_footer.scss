@@ -1,0 +1,38 @@
+footer.main-footer {
+  .popup-added-to-cart {
+    background-color: #fff;
+    padding: 20px clamp(20px, 6vw, 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    @include basicTransition;
+    transform: translateY(-100%);
+
+    &.visible {
+      transform: translateY(0);
+    }
+
+    .icon-text-wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon {
+      width: 20px;
+      margin-right: 20px;
+    }
+
+    .btn {
+      @include maxw(400px) {
+        font-size: 12px;
+        padding: 0 15px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@mixin btn {
+  line-height: 1.1;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  display: inline-flex;
+  padding: 0 30px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+  &.loading {
+    background-image: url("/assets/images/loader.svg");
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    font-size: 0;
+  }
+}
+
+@mixin btn-1 {
+  @include btn;
+  border: 2px solid $color2;
+  background-color: transparent;
+  color: $color2;
+  cursor: pointer;
+  &:hover {
+    border-color: $color3;
+    background-color: $color3;
+    color: #fff;
+  }
+}
+
+.btn-1 {
+  @include btn-1;
+}
+
+@mixin btn-2 {
+  @include btn;
+  background-color: $color2;
+  color: #fff;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btn-2 {
+  @include btn-2;
+}

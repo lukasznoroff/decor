@@ -1,0 +1,26 @@
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: $color1;
+
+  .heading-3 {
+    font-size: clamp(30px, 4vw, 90px);
+
+    &.with-margin {
+      margin-bottom: clamp(20px, 2vw, 45px);
+    }
+  }
+
+  input {
+    background-color: transparent !important;
+  }
+
+  .btn-form-wrapper {
+    width: 100%;
+    text-align: right;
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,22 @@
+body.home {
+
+  .section-hero {
+    //height: 800px;
+    width: 90vw;
+    margin: auto;
+    background-image: url("https://decor-api.lukaswebdeveloper.com/wp-content/uploads/2021/11/hero.jpeg");
+    @include with-css-background;
+
+    height: 80vh;
+    //background-size: cover;
+  }
+
+  .hero-heading {
+    display: inline-flex;
+    align-items: center;
+    height: 500px;
+    font-size: 3vw;
+    color: $color2;
+  }
+}
+
