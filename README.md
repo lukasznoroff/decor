@@ -1,9 +1,9 @@
 # decor-interior semester project
 
-Goal
+##Goal
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
 
-Brief
+##Brief
 You are to build an e-commerce website. You can choose the theme of your website. It should follow the site architecture described below.
 
 Design your website using your favourite tool. You will need to find a suitable logo. If you decide to create a logo yourself, do not spend too much time on it.
@@ -22,25 +22,7 @@ Level 1 is required.
 
 Level 2 is optional.
 
-Strapi API
-The Strapi project can be found here.
-
-Install the npm dependencies and then run npm run develop:
-
-npm install npm run develop
-
-You can add, edit and delete products in the API and change the Home single type content, but do not add any new properties or endpoints to the API.
-
-If you do want to add custom properties, endpoints or additional functionality you can create your own API which must be publicly hosted. Please see the Level 2 section.
-
-User credentials
-
-email: admin@admin.com
-username: admin
-password: Pass1234
-Level 1 (required)
-Customer-facing pages
-Home page
+##Home page
 The home page must include:
 
 A hero banner with an image that is uploaded to Strapi. You can find this in the Home single type in the provided Strapi project.
@@ -71,18 +53,18 @@ After the list of products, display the total price of all the products in the c
 
 Note: the cart page is not a checkout page. No payments or user details are required to be taken.
 
-Admin section
+##Admin section
 The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features.
 
-Login/Logout
+##Login/Logout
 Create an admin login form that allows administrator users to login. Use local storage to keep the user logged in.
 
 When logged in, display a logout button in the layout that logs the user out. Logging out should not clear the cart.
 
-Add/edit products
+##Add/edit products
 Create form(s) that allow products to be added and edited. The form must allow the user to toggle whether a product is featured.
 
-Product images
+##Product images
 For adding/editing product images use either of these 2 methods:
 
 Use a file upload field to upload images to Strapi, or
@@ -91,7 +73,7 @@ You can find the fields for each in Strapi. Use only one to display a product im
 
 Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
 
-Level 2 (optional)
+##Level 2 (optional)
 Create your own API for the site. You can use any backend stack (e.g. Strapi, Wordpress REST API, Firebase, etc) but it MUST be publicly hosted on a server.
 
 The API must include all the functionality in the provided Strapi API and you can add any additional functionality.
