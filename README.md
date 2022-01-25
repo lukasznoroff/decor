@@ -22,7 +22,7 @@ Level 1 is required.
 
 Level 2 is optional.
 
-##Home page
+## Home page
 The home page must include:
 
 A hero banner with an image that is uploaded to Strapi. You can find this in the Home single type in the provided Strapi project.
@@ -53,18 +53,18 @@ After the list of products, display the total price of all the products in the c
 
 Note: the cart page is not a checkout page. No payments or user details are required to be taken.
 
-##Admin section
+## Admin section
 The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features.
 
-##Login/Logout
+## Login/Logout
 Create an admin login form that allows administrator users to login. Use local storage to keep the user logged in.
 
 When logged in, display a logout button in the layout that logs the user out. Logging out should not clear the cart.
 
-##Add/edit products
+## Add/edit products
 Create form(s) that allow products to be added and edited. The form must allow the user to toggle whether a product is featured.
 
-##Product images
+## Product images
 For adding/editing product images use either of these 2 methods:
 
 Use a file upload field to upload images to Strapi, or
@@ -73,7 +73,7 @@ You can find the fields for each in Strapi. Use only one to display a product im
 
 Allow products to be deleted. Before a product is deleted you must display a confirmation dialog. The product should only be deleted if the user confirms.
 
-##Level 2 (optional)
+## Level 2 (optional)
 Create your own API for the site. You can use any backend stack (e.g. Strapi, Wordpress REST API, Firebase, etc) but it MUST be publicly hosted on a server.
 
 The API must include all the functionality in the provided Strapi API and you can add any additional functionality.
