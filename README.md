@@ -1,9 +1,9 @@
 # decor-interior semester project
 
-##Goal
+## Goal
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
 
-##Brief
+## Brief
 You are to build an e-commerce website. You can choose the theme of your website. It should follow the site architecture described below.
 
 Design your website using your favourite tool. You will need to find a suitable logo. If you decide to create a logo yourself, do not spend too much time on it.
