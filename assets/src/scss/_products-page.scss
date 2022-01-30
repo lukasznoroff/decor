@@ -4,6 +4,9 @@ body.products-page {
 
     > .container {
       display: flex;
+      @include maxw($mobileBreakpoint) {
+        display: block;
+      }
 
       .sidebar {
         flex: 0 0 300px;
