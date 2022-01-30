@@ -587,7 +587,7 @@ function handleCartItems() {
   } else {
     var cartDetails = document.createElement("div");
     cartDetails.classList.add("cart-details");
-    cartDetails.innerHTML = "\n            <div class=\"items js-display-cart-items\">\n            </div>\n            <div class=\"order-notes\">\n                <textarea class=\"order-notes-textarea\" placeholder=\"Special instructions for seller\"></textarea>\n            </div>\n            <div class=\"cart-totals\">\n                <h2 class=\"cart-total-title\">Total: <span class=\"value\">$<span class=\"js-display-cart-total\"></span></span></h2>\n                <p class=\"after-cart-total\">Shipping & taxes calculated at checkout</p>\n                <a class=\"btn-2 checkout-btn\" href=\"/checkout.html\">Checkout</a>\n            </div>\n        ";
+    cartDetails.innerHTML = "\n            <div class=\"items js-display-cart-items\">\n            </div>\n     \n        ";
     var itemsWrap = cartDetails.querySelector(".js-display-cart-items");
     var itemsInCart = _addToCart__WEBPACK_IMPORTED_MODULE_0__["default"].getItemsInCart();
     var productIds = [];

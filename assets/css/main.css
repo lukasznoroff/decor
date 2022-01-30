@@ -848,6 +848,11 @@ body.cart .main-cols-wrap > *:nth-child(2) {
   border-left: 1px solid #b0acac;
   border-bottom: 1px solid #b0acac;
 }
+@media (max-width: 800px) {
+  body.cart .main-cols-wrap > *:nth-child(2) {
+    padding: 90px 5px;
+  }
+}
 body.cart .col-right .col-inner-wrapper {
   flex: 1;
 }
@@ -956,6 +961,11 @@ body.checkout .main-wrap > *:nth-child(2) {
   padding: 100px 80px;
   border-left: 1px solid #b0acac;
   border-bottom: 1px solid #b0acac;
+}
+@media (max-width: 800px) {
+  body.checkout .main-wrap > *:nth-child(2) {
+    padding: 90px 5px;
+  }
 }
 
 @media (max-width: 800px) {

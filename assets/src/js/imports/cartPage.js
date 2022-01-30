@@ -37,14 +37,7 @@ function handleCartItems() {
         cartDetails.innerHTML = `
             <div class="items js-display-cart-items">
             </div>
-            <div class="order-notes">
-                <textarea class="order-notes-textarea" placeholder="Special instructions for seller"></textarea>
-            </div>
-            <div class="cart-totals">
-                <h2 class="cart-total-title">Total: <span class="value">$<span class="js-display-cart-total"></span></span></h2>
-                <p class="after-cart-total">Shipping & taxes calculated at checkout</p>
-                <a class="btn-2 checkout-btn" href="/checkout.html">Checkout</a>
-            </div>
+     
         `;
         const itemsWrap = cartDetails.querySelector(".js-display-cart-items");
         const itemsInCart = addToCart.getItemsInCart();

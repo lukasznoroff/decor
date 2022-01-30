@@ -66,6 +66,9 @@
   }
   > *:nth-child(2) {
     padding: 100px 80px;
+    @include maxw($mobileBreakpoint) {
+      padding: 90px 5px;
+    }
     border-left: 1px solid $color-gray-borders;
     border-bottom: 1px solid $color-gray-borders;
   }
