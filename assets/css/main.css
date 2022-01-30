@@ -608,6 +608,11 @@ body.products-page main {
 body.products-page main > .container {
   display: flex;
 }
+@media (max-width: 800px) {
+  body.products-page main > .container {
+    display: block;
+  }
+}
 body.products-page main > .container .sidebar {
   flex: 0 0 300px;
   margin-right: 50px;
