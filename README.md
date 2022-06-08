@@ -9,7 +9,7 @@
 This is a home furnishings e-commerce site that has both customer and admin sections. For my backend I chose WordPress whit Custom Post Type UI plugin, this allowed me to create the necessary fields for the products.
 
 
-The app have the following pages:
+The app has the following pages:
 
 ### Home
 
@@ -83,7 +83,7 @@ Password: ,hZdZKBW7ql4
 1. Clone the repo:
 
 ```bash
-https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-lukasznoroff
+https://github.com/lukasznoroff/decor.git
 ```
 
 2. Install the dependencies:
