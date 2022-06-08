@@ -106,7 +106,7 @@ npm run start
 
 [My Twitter page](www.twitter.com)
 
-[My LinkedIn page](www.linkedin.com)
+[My LinkedIn page](https://www.linkedin.com/feed/)
 
 
 <!-- ## Goal
