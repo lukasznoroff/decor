@@ -1,6 +1,129 @@
-# decor-interior semester project
+# Decor-Interior Semester Project
 
-## Goal
+
+ ![Front-End Developer](https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-lukasznoroff/blob/main/javaScript-frameworks-ca.png)
+
+
+---
+
+I used WordPress as a backend, and the REST API integration to feed data into a React app.
+
+The app have the following paths:
+
+-   "/"
+-   "/detail/:param"
+-   "/contact"
+-   "/login"
+-   "/admin"
+
+The administrator path is not displayed in the navigation.
+
+
+
+### Home
+
+This page displays an array of musical instruments, where each item is assigned the name of an instrument, price, category, etc.
+Each result contains a link to a detail page, passing a parameter in the URL.
+
+<!-- Find an API that returns at least:
+
+-   an array of items
+-   a single item retrieved by a parameter (id, name, slug, etc) -->
+
+<!-- If you are using Next you can also hard-code json and return it from API routes created in `pages/api/*`.
+
+You can use your own Wordpress or Strapi or any other API that you have created for these calls but it must be publically hosted - it must not be running on your localhost.
+
+Display at least 2 properties from each result. -->
+
+<!-- Each result should link to the detail page, passing a parameter in the URL. -->
+
+### Detail
+
+Here a parameter is taken from the URL and is used to call the API to retrieve one element.
+
+<!-- Retrieve the parameter from the URL and use it in an API call to fetch one item.
+
+Display at least 3 properties from the item. -->
+
+### Contact
+
+Contact form with validation
+
+<!-- Create a form with the following inputs and validation: -->
+
+-   First name - required, minimum 3 characters
+-   Last name - required, minimum 4 characters
+-   Email - required, must be in a valid email format
+-   Subject - required, this must be a select box with at least 2 options
+-   Message - required, minimum 10 characters.
+
+### Login
+
+Login requires a user name and password.
+
+<!-- Create a form with username/email and password fields. The inputs should have the necessary validation for a login form (not a registration form). -->
+
+<!-- The form should make a login request to either a Wordpress API with the JWT plugin installed or a Strapi API. If the login is successful redirect the user to the admin route. -->
+The form makes a login request to the wordpress API with the JWT plugin installed . If the login is successful, redirect the user to the admin path.
+
+If the login is unsuccessful display a message above the form.
+
+### Admin
+
+<!-- This page will simply display an "Admin" heading. -->
+This page displays the header "Admin".
+
+
+Each result on the home page has a button. Clicking this button switches the result to/from the favourites board.
+
+The favourites page displays all the items currently in the favourites board.
+
+### Login and Password
+Login: kfaute
+
+Password: ^pTIMi1gt(^6
+
+<!-- ## Level 2
+
+Add a favourite button/icon component to each result on your home page. Clicking this button will toggle the result in/out of a favourites array.
+
+Add a "/favourites" path to your routes. This page will display all the items currently in the favourites array. -->
+
+---
+## Built With
+
+- [React.js](https://reactjs.org/)
+- [Wordpress](https://wordpress.org/)
+- [Styled-Components](https://styled-components.com/)
+
+---
+## Getting Started
+
+### Installing
+
+1. Clone the repo:
+
+```bash
+https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-lukasznoroff
+```
+
+2. Install the dependencies:
+
+```
+npm install
+```
+
+### Running
+
+
+To run the app, run the following command:
+
+```bash
+npm start
+```
+
+<!-- ## Goal
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
 
 ## Brief
@@ -79,3 +202,4 @@ Create your own API for the site. You can use any backend stack (e.g. Strapi, Wo
 The API must include all the functionality in the provided Strapi API and you can add any additional functionality.
 
 It MUST be publicly hosted and accessible, you cannot submit a custom API with your frontend code.
+ -->
