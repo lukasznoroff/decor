@@ -1,101 +1,79 @@
 # Decor-Interior Semester Project
 
 
- ![Front-End Developer](https://github.com/Noroff-FEU-Assignments/js-frameworks-course-assignment-lukasznoroff/blob/main/javaScript-frameworks-ca.png)
+ ![Front-End Developer](https://github.com/lukasznoroff/decor/blob/main/semester-project-2.jpeg)
 
 
 ---
 
-I used WordPress as a backend, and the REST API integration to feed data into a React app.
-
-The app have the following paths:
-
--   "/"
--   "/detail/:param"
--   "/contact"
--   "/login"
--   "/admin"
-
-The administrator path is not displayed in the navigation.
+This is a home furnishings e-commerce site that has both customer and admin sections. For my backend I chose WordPress whit Custom Post Type UI plugin, this allowed me to create the necessary fields for the products.
 
 
+The app have the following pages:
 
 ### Home
 
-This page displays an array of musical instruments, where each item is assigned the name of an instrument, price, category, etc.
-Each result contains a link to a detail page, passing a parameter in the URL.
+A hero banner with an image uploaded to Wordpress. 
+A list of featured products. On Wordpress, products can be marked as "featured". When a product is marked as "featured", it should be displayed on the home page. 
 
-<!-- Find an API that returns at least:
+## Product page
 
--   an array of items
--   a single item retrieved by a parameter (id, name, slug, etc) -->
 
-<!-- If you are using Next you can also hard-code json and return it from API routes created in `pages/api/*`.
+A list of all products added to Wordpress. Each product includes a title, price, and image. Product is linked to its details page.
+Search text box. During search only products which contain search text in title or description will be listed.
 
-You can use your own Wordpress or Strapi or any other API that you have created for these calls but it must be publically hosted - it must not be running on your localhost.
 
-Display at least 2 properties from each result. -->
+## Product details page
+This page is accessed by clicking on the product on the product listing page. The product details page contains:
 
-<!-- Each result should link to the detail page, passing a parameter in the URL. -->
+- title
+- description
+- image
+- price
+an "add to cart" button. This switches the product to and from the cart array stored in the local warehouse.
+
+## Cart page
+The shopping cart page displays a list of all products added to the cart. Products are saved in the local storage and displayed on the page. If the cart is empty, display a message indicating this.
+
+Each product in the cart display:
+
+- title
+- price
+- a link to the product view page
+- image
+after the list of products, display the total price of all the products in the cart.
+
 
 ### Detail
 
 Here a parameter is taken from the URL and is used to call the API to retrieve one element.
 
-<!-- Retrieve the parameter from the URL and use it in an API call to fetch one item.
 
-Display at least 3 properties from the item. -->
+## Admin section 
 
-### Contact
+Is only available to logged in admin users and contains the following functions.
 
-Contact form with validation
+- Login/Logout
+Admin login form, the user data is stored in the local storage
+A form to login admin and store his data in local storage.
 
-<!-- Create a form with the following inputs and validation: -->
+- Add/edit products
+A form that allows the admin to add and edit products. The form allows the user to toggle whether a given product is highlighted.
 
--   First name - required, minimum 3 characters
--   Last name - required, minimum 4 characters
--   Email - required, must be in a valid email format
--   Subject - required, this must be a select box with at least 2 options
--   Message - required, minimum 10 characters.
-
-### Login
-
-Login requires a user name and password.
-
-<!-- Create a form with username/email and password fields. The inputs should have the necessary validation for a login form (not a registration form). -->
-
-<!-- The form should make a login request to either a Wordpress API with the JWT plugin installed or a Strapi API. If the login is successful redirect the user to the admin route. -->
-The form makes a login request to the wordpress API with the JWT plugin installed . If the login is successful, redirect the user to the admin path.
-
-If the login is unsuccessful display a message above the form.
-
-### Admin
-
-<!-- This page will simply display an "Admin" heading. -->
-This page displays the header "Admin".
-
-
-Each result on the home page has a button. Clicking this button switches the result to/from the favourites board.
-
-The favourites page displays all the items currently in the favourites board.
 
 ### Login and Password
-Login: kfaute
+Login: dnmbwl
 
-Password: ^pTIMi1gt(^6
-
-<!-- ## Level 2
-
-Add a favourite button/icon component to each result on your home page. Clicking this button will toggle the result in/out of a favourites array.
-
-Add a "/favourites" path to your routes. This page will display all the items currently in the favourites array. -->
+Password: ,hZdZKBW7ql4
 
 ---
 ## Built With
 
-- [React.js](https://reactjs.org/)
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [SASS](https://sass-lang.com/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Wordpress](https://wordpress.org/)
-- [Styled-Components](https://styled-components.com/)
+
 
 ---
 ## Getting Started
@@ -120,8 +98,16 @@ npm install
 To run the app, run the following command:
 
 ```bash
-npm start
+npm run start
 ```
+
+## Contact
+
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
+
 
 <!-- ## Goal
 To create an e-commerce website that has both customer-facing and admin sections. Both sections should be responsive and the website will be populated by a Strapi API supplied by Noroff.
